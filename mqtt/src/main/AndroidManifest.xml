@@ -1,2 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yf" />
+    package="com.yf.mqtt" >
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <service
+            android:name=".MqttService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.yf.mqtt.START_MQTTSERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+    </application>
+</manifest>

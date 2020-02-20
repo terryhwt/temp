@@ -1,0 +1,5 @@
+<resources>
+    <!-- network   -->
+    <string name="current_network_name">当前网络 : </string>
+    <string name="no_network">没有可用网络</string>
+</resources>
